@@ -73,7 +73,13 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:jmheatingservices@hotmail.com"
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact')?.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
                   className="hover:text-pink-500 transition"
                 >
                   Contact

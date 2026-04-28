@@ -92,14 +92,15 @@ export default function Navigation({ showBg }: NavigationProps) {
             >
               FAQ
             </button>
-            <a
-              href="mailto:jmheatingservices@hotmail.com"
+            <button
+              type="button"
+              onClick={() => scrollToSection('contact')}
               className={`transition font-medium ${
                 showBg ? 'text-gray-700 hover:text-purple-700' : 'text-white hover:text-purple-200'
               }`}
             >
               Contact
-            </a>
+            </button>
             <a
               href="tel:07707080781"
               className="flex items-center space-x-2 bg-pink-500 text-white px-6 py-2 rounded-lg hover:bg-pink-600 transition font-semibold"
@@ -139,13 +140,13 @@ export default function Navigation({ showBg }: NavigationProps) {
             >
               FAQ
             </button>
-            <a
-              href="mailto:jmheatingservices@hotmail.com"
-              onClick={() => setMobileMenuOpen(false)}
+            <button
+              type="button"
+              onClick={() => scrollToSection('contact')}
               className="block w-full text-left text-gray-700 hover:text-purple-700 py-2 px-2"
             >
               Contact
-            </a>
+            </button>
             <a
               href="tel:07707080781"
               className="flex items-center space-x-2 bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition w-full justify-center font-semibold"

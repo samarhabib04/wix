@@ -8,6 +8,7 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import ServiceArea from './components/ServiceArea';
 import FAQ from './components/FAQ';
+import Contact from './components/Contact';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
@@ -33,6 +34,7 @@ function App() {
       <Testimonials />
       <ServiceArea />
       <FAQ />
+      <Contact />
       <FinalCTA />
       <Footer />
     </div>
