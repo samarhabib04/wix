@@ -1,10 +1,19 @@
 import { useState } from 'react';
-import { Wrench, Flame, Zap, Check } from 'lucide-react';
+import { Wrench, Flame, Zap, Wind, Check } from 'lucide-react';
+
+type ServiceKey = 'plumbing' | 'heating' | 'gas' | 'renewable';
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState('plumbing');
+  const [activeTab, setActiveTab] = useState<ServiceKey>('plumbing');
 
-  const services = {
+  const tabs: { id: ServiceKey; label: string; icon: typeof Wrench }[] = [
+    { id: 'plumbing', label: 'Plumbing', icon: Wrench },
+    { id: 'heating', label: 'Heating', icon: Flame },
+    { id: 'gas', label: 'Gas', icon: Zap },
+    { id: 'renewable', label: 'Renewable Heating', icon: Wind },
+  ];
+
+  const services: Record<ServiceKey, { title: string; subtitle: string; image: string; items: string[] }> = {
     plumbing: {
       title: 'Plumbing Services',
       subtitle: 'From a dripping tap to complete bathroom transformations',
@@ -60,33 +69,50 @@ export default function Services() {
         'British Gas Trained Engineers',
       ],
     },
+    renewable: {
+      title: 'Renewable Heating',
+      subtitle: 'Low-carbon comfort with heat pumps and air conditioning',
+      image:
+        'https://images.pexels.com/photos/4236023/pexels-photo-4236023.jpeg?auto=compress&cs=tinysrgb&w=800',
+      items: [
+        'Air Source Heat Pump Installation & Replacement',
+        'Ground Source Heat Pump Systems',
+        'Heat Pump Servicing, Repairs & Diagnostics',
+        'Heat Pump Upgrades & System Optimisation',
+        'Domestic Air Conditioning Installation',
+        'Air Conditioning Servicing & Repairs',
+        'Multi-Split & Single-Split Systems',
+        'Climate Control & Cooling Solutions',
+        'Renewable Heating Design & Sizing Advice',
+        'Hybrid Systems (Heat Pump + Boiler Integration)',
+      ],
+    },
   };
 
-  const current = services[activeTab as keyof typeof services];
+  const current = services[activeTab];
 
   return (
     <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold mb-4 text-gray-900">Our Services</h2>
         <p className="text-gray-600 mb-12 text-lg">
-          Comprehensive plumbing, heating, and gas solutions for your home
+          Comprehensive plumbing, heating, gas, and renewable solutions for your home
         </p>
 
-        <div className="flex gap-4 mb-12 border-b border-gray-200">
-          {['plumbing', 'heating', 'gas'].map((tab) => (
+        <div className="flex flex-wrap gap-2 sm:gap-4 mb-12 border-b border-gray-200">
+          {tabs.map(({ id, label, icon: Icon }) => (
             <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`flex items-center space-x-2 px-6 py-4 font-bold transition-all ${
-                activeTab === tab
+              key={id}
+              type="button"
+              onClick={() => setActiveTab(id)}
+              className={`flex items-center space-x-2 px-4 sm:px-6 py-4 font-bold transition-all text-left ${
+                activeTab === id
                   ? 'text-pink-600 border-b-2 border-pink-500'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              {tab === 'plumbing' && <Wrench size={20} />}
-              {tab === 'heating' && <Flame size={20} />}
-              {tab === 'gas' && <Zap size={20} />}
-              <span className="capitalize">{tab}</span>
+              <Icon size={20} className="shrink-0" />
+              <span>{label}</span>
             </button>
           ))}
         </div>
