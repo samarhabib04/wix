@@ -23,7 +23,7 @@ export default function Footer() {
                 />
                 <span className="text-2xl font-bold text-white">
                   <span className="text-purple-200">JM</span>
-                  <span className="text-pink-400"> Heating</span>
+                  <span className="text-pink-400"> Heating Services</span>
                 </span>
               </a>
             </div>

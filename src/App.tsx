@@ -11,9 +11,6 @@ import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
-/** When true, the home page only shows content up to and including About (nothing below Testimonials). */
-const HOME_END_BEFORE_TESTIMONIALS = true;
-
 function App() {
   const [navBg, setNavBg] = useState(false);
 
@@ -24,19 +21,6 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  if (HOME_END_BEFORE_TESTIMONIALS) {
-    return (
-      <div className="min-h-screen bg-white">
-        <Navigation showBg={navBg} />
-        <Hero />
-        <EmergencyBanner />
-        <ValueProps />
-        <Services />
-        <About />
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-white">

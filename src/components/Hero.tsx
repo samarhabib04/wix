@@ -12,6 +12,9 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div>
+              <p className="text-lg sm:text-xl font-semibold text-pink-300 mb-3 tracking-wide">
+                JM Heating Services
+              </p>
               <h1 className="text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                 South Cheshire's Most Trusted Heating & Plumbing Experts
               </h1>

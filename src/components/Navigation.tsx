@@ -61,7 +61,7 @@ export default function Navigation({ showBg }: NavigationProps) {
                   className={showBg ? 'text-pink-500' : 'text-pink-400'}
                 >
                   {' '}
-                  Heating
+                  Heating Services
                 </span>
               </span>
             </a>

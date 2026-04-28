@@ -26,7 +26,7 @@ export default function About() {
                 Meet Jason - Your Local Expert
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                I've been serving the South Cheshire, Staffordshire and Shropshire
+                At JM Heating Services, I've been serving the South Cheshire, Staffordshire and Shropshire
                 communities
                 since 1990. What started as an apprenticeship with British Gas has
                 grown into a passion for delivering exceptional plumbing and heating
