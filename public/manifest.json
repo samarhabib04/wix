@@ -1,0 +1,38 @@
+{
+  "name": "Dog Quest - Ireland's Premier Dog Marketplace",
+  "short_name": "Dog Quest",
+  "description": "Find your perfect dog companion in Ireland. Browse pedigrees, mixed breeds, stud services, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2d5016",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["pets", "shopping", "marketplace"],
+  "lang": "en-IE",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
+

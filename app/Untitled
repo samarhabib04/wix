@@ -1,0 +1,33 @@
+## Error Type
+Build Error
+
+## Error Message
+Ecmascript file had an error
+
+## Build Output
+./components/ListingPreviewModal.tsx:10:1
+Ecmascript file had an error
+   8 | import { useWishlist } from "@/hooks/use-wishlist";
+   9 | import WishlistAuthModal from './WishlistAuthModal';
+> 10 | 'use client';
+     | ^^^^^^^^^^^^^
+  11 |
+  12 | import Link from 'next/link';
+  13 | import { formatBreedName } from '@/lib/utils/breed-utils';
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import traces:
+  Client Component Browser:
+    ./components/ListingPreviewModal.tsx [Client Component Browser]
+    ./components/NewListingsCarousel.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ListingPreviewModal.tsx [Client Component SSR]
+    ./components/NewListingsCarousel.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+Next.js version: 16.0.10 (Turbopack)

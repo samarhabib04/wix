@@ -1,0 +1,26 @@
+# Dog Quest - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /my-buyer-dashboard/
+Disallow: /my-seller-dashboard/
+Disallow: /business-dashboard/
+Disallow: /_next/
+Disallow: /checkout/
+
+# Sitemap
+Sitemap: https://dogquest.ie/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

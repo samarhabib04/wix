@@ -1,0 +1,58 @@
+
+[functions.mailerlite-sync]
+enabled = true
+verify_jwt = true
+import_map = "./functions/mailerlite-sync/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/mailerlite-sync/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/mailerlite-sync/*.html" ]
+
+[functions.stripe-webhook]
+enabled = true
+verify_jwt = false
+# Stripe webhooks don't use JWT - they use signature verification instead
+
+[functions.handle-boost-payment-success]
+enabled = true
+verify_jwt = true
+import_map = "./functions/handle-boost-payment-success/deno.json"
+entrypoint = "./functions/handle-boost-payment-success/index.ts"
+
+[functions.delete-user-account]
+enabled = true
+verify_jwt = true
+import_map = "./functions/delete-user-account/deno.json"
+entrypoint = "./functions/delete-user-account/index.ts"
+
+[functions.send-email]
+enabled = true
+verify_jwt = false
+import_map = "./functions/send-email/deno.json"
+entrypoint = "./functions/send-email/index.ts"
+
+[functions.process-sale-listing-expiry]
+enabled = true
+verify_jwt = false
+import_map = "./functions/process-sale-listing-expiry/deno.json"
+entrypoint = "./functions/process-sale-listing-expiry/index.ts"
+
+[functions.process-v1-code-expiry]
+enabled = true
+verify_jwt = false
+import_map = "./functions/process-v1-code-expiry/deno.json"
+entrypoint = "./functions/process-v1-code-expiry/index.ts"
+
+[functions.fraud-escalate]
+enabled = true
+verify_jwt = true
+import_map = "./functions/fraud-escalate/deno.json"
+entrypoint = "./functions/fraud-escalate/index.ts"
+
+[functions.admin-create-admin]
+enabled = true
+verify_jwt = true
+import_map = "./functions/admin-create-admin/deno.json"
+entrypoint = "./functions/admin-create-admin/index.ts"
